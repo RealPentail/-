@@ -1,14 +1,18 @@
 package myproject.board.web;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@Slf4j
+@RestController
 public class HomeController {
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String home() {
-        return "home";
+        log.info("사용됨");
+
+        return "Hello Spring and React";
     }
 
 }
